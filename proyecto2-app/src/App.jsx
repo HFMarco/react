@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import { Navbar } from './components/Navbar.jsx'
-import {Itemlistcontainer} from './components/Itemlistcontainer.jsx'
+import { NavBar } from './components/NavBar.jsx'
+import {ItemListContainer} from './components/ItemListContainer.jsx'
 
 function App() {
   return (
     <div>
-    <Navbar />
-    <Itemlistcontainer greeting={'Holaaa'}/>
+    <NavBar />
+    <ItemListContainer greeting={'Holaaa'}/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import './Navbar.css'
-export const Navbar = () => {
+export const NavBar = () => {
     return(
-        <div>ESTO ES EL NAVBAR xd</div>
+        <div>ESTO ES EL NAVBAR xdsdasdasd</div>
+        
     )
 }

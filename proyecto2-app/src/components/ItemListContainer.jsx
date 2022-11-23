@@ -1,10 +1,8 @@
 
-export const Itemlistcontainer = ( {greeting} ) => {
+export const ItemListContainer = ( {greeting} ) => {
     return(
         <div>
             <p>{greeting}</p>
-            ESTO ES EL item xdasdasd
-
         </div>
 
     )
