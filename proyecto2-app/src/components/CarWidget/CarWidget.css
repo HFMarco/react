@@ -1,0 +1,16 @@
+.carw{
+    background-image: url(/public/shopping-cart.png);
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-size: cover;
+}
+.linka{
+        display: block;
+        width:100%;
+        height:100%;
+        top:0;
+        left: 0;
+        z-index: 1;
+}
