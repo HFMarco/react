@@ -33,7 +33,7 @@
     padding: 0;
 }
 .searchlogo{
-    background-image: url(/public/search.png);
+    background-image: url(/src/assets/search.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

@@ -1,11 +1,11 @@
 import './NavBar.css'
-import { Carwidget } from '../CarWidget/CarWidget'
+import { Cartwidget } from '../CartWidget/CartWidget'
 
 export const NavBar = () => {
     return(
         <div className='contenedorflex'>
             <div className='Brand'></div>
-            <Carwidget />
+            <Cartwidget />
         </div>
     )
 }

@@ -9,7 +9,7 @@
 
 .Brand{
     align-self: start;
-    background-image: url(/public/logo.svg);
+    background-image: url(/src/assets/logo.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 300px;
