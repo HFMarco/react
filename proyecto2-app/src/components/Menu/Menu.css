@@ -6,7 +6,6 @@
 .contenedorflex_item{
     display: flex;
     flex-direction: row;
-    background-color: rgb(143, 143, 143);
     align-items: center;
     align-content: center;
     justify-content: space-between;
@@ -31,24 +30,4 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-.searchlogo{
-    background-image: url(/src/assets/search.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 40px;
-    height: 40px;
-}
-.contenedorflex_item .searcha:hover{
-    background: none;
-}
-.contenedorflex_item .searcha:focus{
-    text-decoration: none;
-    background: none;
-    text-transform: none;
-}
-.contenedorflex_item .searcha{
-    text-decoration: none;
-    color: inherit;
 }

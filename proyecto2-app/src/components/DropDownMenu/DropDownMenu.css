@@ -24,7 +24,7 @@
     }
     
     .dropdown-content img{
-        width: 20px;
+        width: auto;
         height: 20px;
         display: inline;
         padding-right: 10px;

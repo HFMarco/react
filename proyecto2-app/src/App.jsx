@@ -1,16 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+
 import './App.css'
 import { NavBar } from './components/NavBar/NavBar.jsx'
-import {ItemListContainer} from './components/Itemlistcontainter/ItemListContainer.jsx'
+import { ItemListConteiner } from './components/ItemListConteiner.jsx/ItemListConteiner'
+import { ItemDetailConteiner } from './components/ItemDetailConteiner/ItemDetailConteiner'
+import { CartConteiner } from './components/CartContainer/CartConteiner'
+import { Principal } from './components/Principal/Principal'
 
 function App() {
   return (
-    <div>
-    <NavBar>
-    </NavBar>  
-    <ItemListContainer greeting={'Hola,  Bienvenido'}/> 
-    </div>
+    <BrowserRouter>
+    <NavBar />
+
+    <Routes >
+      
+      
+      <Route path='/' element={ <ItemListConteiner /> } />
+      <Route path='/Home' element={ <Principal /> } />
+      <Route path='/itemlist/:category' element={ <ItemListConteiner /> } />
+      <Route path='/detail/:productID' element={ <ItemDetailConteiner /> } />
+      <Route path='/cart' element={ <CartConteiner /> } />
+
+      <Route path='*' element={<Navigate to='/'/>}/>
+
+    </Routes>
+    </BrowserRouter>
   )
 }
 

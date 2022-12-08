@@ -15,3 +15,23 @@
     width: 300px;
     height: 300px;
 }
+.searchicon{
+    background-image: url(/src/assets/searchwhite.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+.contenedorflex_item .searcha:hover{
+    background: none;
+}
+.contenedorflex_item .searcha:focus{
+    text-decoration: none;
+    background: none;
+    text-transform: none;
+}
+.contenedorflex_item .searcha{
+    text-decoration: none;
+    color: inherit;
+}

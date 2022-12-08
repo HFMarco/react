@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom'
 import './DropDownMenu.css'
 
-export default function Desplegable() {
+export default function DropDownMenu() {
     return (
         <li className='dropdown'>
-            <a href="" className='dropbtn'>CATEGORIAS</a>
+            <a href="#" className='dropbtn'>CATEGORIAS</a>
             <div className='dropdown-content'>
-            <a href="#"><img src='/src/assets/img/shooter.png'></img>Link 1</a>
-            <a href="#"><img src='/src/assets/img/jigsaw.png'></img>Link 2</a>
-            <a href="#"><img src='/src/assets/img/sword.png'></img>Link 3</a>
-            <a href="#"><img src='/src/assets/img/finish-flag.png'></img>Link 4</a>
+            <Link to='/itemlist/Shooter'><img src='/src/assets/img/shooter.png'></img>Link 1</Link>
+            <Link to='/itemlist/jigsaw'><img src='/src/assets/img/jigsaw.png'></img>Link 2</Link>
+            <Link to='/itemlist/sword'><img src='/src/assets/img/sword.png'></img>Link 3</Link>
+            <Link to='/itemlist/finishflag'><img src='/src/assets/img/finish-flag.png'></img>Link 4</Link>
             </div>
         </li>
     )
