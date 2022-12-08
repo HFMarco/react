@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 60px;
     gap: 141px;
 }
 .categorias{
@@ -28,7 +28,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 35px;
 }
 div.products_container{
     display: flex;

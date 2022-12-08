@@ -2,6 +2,8 @@
 import { useState,useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { gFetch } from '../GFETCH/gFetch'
+import { ItemList } from '../ItemList/ItemList'
+
 import './ItemListConteiner.css'
 
 
@@ -9,15 +11,15 @@ export const ItemListConteiner = () => {
 
     const[products,setProducts]= useState([])
 
-    const{category}=useParams()
+    const{id}=useParams()
 
 
         //consulta de API
     useEffect(()=>{
-        if (category) {
+        if (id) {
             gFetch()
             // .then( respuesta => respuesta)
-            .then( data => setProducts(data.filter(prod=>prod.category === category)))
+            .then( data => setProducts(data.filter(prod=>prod.category === id)))
             .catch(err => console.log(err))
         } else {
                 gFetch()
@@ -26,7 +28,7 @@ export const ItemListConteiner = () => {
             .catch(err => console.log(err))
         }
     
-    },[category])
+    },[id])
 
 
     
@@ -42,24 +44,7 @@ export const ItemListConteiner = () => {
                 
             </div>    
         <div className='mapcontainer'>
-            {
-                products.map(product => 
-                                    
-                                        <div className='products_container' key={product.id}>
-                                            <div className='img_container'>
-                                                <img src={product.foto} alt='' className='prodimg' ></img>
-                                            </div>
-                                            <div className='product_name'>
-                                                <h2>{product.nombre}</h2>
-                                            </div>
-                                            <div className='product_precio'>
-                                                <h2>${product.precio}</h2>
-                                            </div>
-                                            <div className='shopboton'>
-                                                <Link to={`/detail/${product.id}`}><button>Comprar</button></Link>
-                                            </div>
-                                        </div>
-)}
+            <ItemList products={products}/>
         </div>
         </div>
     

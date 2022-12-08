@@ -6,7 +6,7 @@ export const NavBar = () => {
     return(
         <>
         <div className='contenedorflex'>
-            <div className='Brand'></div>
+            <Link to="/"><div className='Brand'></div></Link>
             <div className='contenedorflex_item'>
             <Link to ="/"><div className='searchicon'></div></Link>
             </div>

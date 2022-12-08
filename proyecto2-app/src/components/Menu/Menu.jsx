@@ -9,7 +9,7 @@ return (
     <div>
     <ul className="contenedorflex_item">
             <li><Link to="/Home">Home</Link></li>
-            <li><Link to="/itemlist">Shop</Link></li>
+            <li><Link to="/itemlistconteiner">Shop</Link></li>
             <DropDownMenu />
             <Cartwidget />
     </ul>
