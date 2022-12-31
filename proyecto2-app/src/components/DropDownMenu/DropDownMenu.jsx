@@ -8,7 +8,7 @@ export default function DropDownMenu() {
             <div className='dropdown-content'>
             <Link to='/category/Aventura'><img src='/src/assets/img/sword.png'></img>Aventura</Link>
             <Link to='/category/Pelea'><img src='/src/assets/img/jigsaw.png'></img>Pelea</Link>
-            <Link to='/category/Terror'><img src='/src/assets/img/Shooter.png'></img>Terror</Link>
+            <Link to='/category/Horror'><img src='/src/assets/img/Shooter.png'></img>Horror</Link>
             <Link to='/category/Carreras'><img src='/src/assets/img/finish-flag.png'></img>Carreras</Link>
             </div>
         </li>

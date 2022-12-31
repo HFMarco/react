@@ -8,10 +8,12 @@ export const NavBar = () => {
         <div className='contenedorflex'>
             <Link to="/"><div className='Brand'></div></Link>
             <div className='contenedorflex_item'>
+            <input id="inputbuscadornav"></input>
             <Link to ="/"><div className='searchicon'></div></Link>
             </div>
         </div>
         <Menu />
+        <hr />
         </>
     )
 }

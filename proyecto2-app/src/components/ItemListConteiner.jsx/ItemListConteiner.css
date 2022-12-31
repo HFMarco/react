@@ -1,25 +1,70 @@
-/* .prodimg{
-    width: 400px;
-    height: 400px;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200&display=swap');
 
 .shop_container{
     margin:0 auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 60px;
     gap: 141px;
 }
-.categorias{
-    width: auto;
+.barraderecha{
+    background-color: rgb(15, 15, 15);
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     flex-direction: column;
-    flex: 30%;
-    gap: 20px;
+    width: 20%;
+    padding-top: 30px;
+    align-items: center;
+}
+.buscador{
+    margin-bottom: 18px;
+}
+#inputbuscador{
+    margin: 0 auto;
+    width: 230px;
+    height: 32px;
+}
+.div_categorias{
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+    font-family: 'Inter Tight', sans-serif;
+}
+.div_categorias hr{
+    border-width: 0.5px;
+    margin-bottom: 20px;
+}
+.inverted-8 {
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(white, white);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+}
+    .inverted-8:hover {
+        background-size: 100% 0.1em;
+        background-position-x: 0%;
+}
+.categlist{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    align-items:flex-start;
+    font-size: 20px;
+    gap: 10px;
+    margin-top: 15px;
+    padding-left: 20px;
+}
+.categlist p{
+    padding-right: 50px;
+}
+.categlist a{
+    color: white;
 }
 .mapcontainer{
     display: flex;
@@ -30,6 +75,7 @@
     align-items: center;
     gap: 35px;
 }
+
 div.products_container{
     display: flex;
     flex-direction: column;

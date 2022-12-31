@@ -3,11 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+button{
+  cursor: pointer;
+}
 html{
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body{
   background-color: black;
   color: white;
+}
+
+a:link, a:visited, a:active{
+  text-decoration: none;
 }

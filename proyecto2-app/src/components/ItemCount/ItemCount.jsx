@@ -2,12 +2,12 @@ import { useState } from "react"
 import './ItemCount.css'
 
 
-export const ItemCount = ({stock=20, initial=1,onAdd}) => {
+export const ItemCount = ({stock=20 , initial=1 ,onAdd}) => {
 
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(initial)
 
     const restar = () => {
-        if ( count >initial ){
+        if ( count > initial ){
             setCount(count-1)
         }
     }
@@ -17,9 +17,13 @@ export const ItemCount = ({stock=20, initial=1,onAdd}) => {
         }
     }
 
-    const handleOnAdd = () =>{
-        onAdd(count)
+
+    const handleOnAdd = () => {
+        onAdd(count);
     }
+
+
+    
 return (
     <>
     <div className="divcount">

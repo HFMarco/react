@@ -7,7 +7,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 90%;
     justify-content:space-around;
     margin-top: 35px;
 }
@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 33%;
 }
 .detallegame{
     display: flex;
@@ -22,6 +23,43 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 350px;
+    width: 25%;
     text-align: justify;
+}
+.divprecio{
+    text-align: center;
+    width: 500px;
+}
+.divprecio button{
+    width: 33%;
+    font-size: 15px;
+}
+.divprecio_b{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 500px;
+    justify-content: center;
+    
+}
+.divprecio_b button{
+    width: 180px;
+    font-size: 15px;
+    height: 50px;
+}
+
+.divbotones_comprar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    font-size: 32px;
+    margin-top: 10px;
+}
+.divbotones_comprar button{
+    width: 150px;
+    font-size: 20px;
 }

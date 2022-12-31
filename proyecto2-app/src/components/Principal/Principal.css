@@ -1,16 +1,16 @@
-
 .div_principal{
     margin: 0 auto;
     width: 80%;
     text-align: center;
-    
 }
 .div_principal h1{
     margin-top: 210px;
 }
-
-
-/* CSS */
+.style1{
+    background-color:red;
+    color:white;
+    font-size:44px;
+}
 .botoncomprar {
     margin-top: 40px;
     align-items: center;

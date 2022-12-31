@@ -6,26 +6,33 @@ import { ItemListConteiner } from './components/ItemListConteiner.jsx/ItemListCo
 import { ItemDetailConteiner } from './components/ItemDetailConteiner/ItemDetailConteiner'
 import { CartConteiner } from './components/CartContainer/CartConteiner'
 import { Principal } from './components/Principal/Principal'
+import { CartContextProvider } from './Contexts/CartContextProvider.jsx'
 
 function App() {
   return (
+
+
     <BrowserRouter>
-    <NavBar />
 
-    <Routes >
-      
-      
-      <Route path='/' element={ <ItemListConteiner /> } />
-      <Route path='/Home' element={ <Principal /> } />
-      <Route path='/itemlistconteiner' element={ <ItemListConteiner /> } />
-      <Route path='/category/:id' element={ <ItemListConteiner /> } />
-      <Route path='/item/:id' element={ <ItemDetailConteiner /> } />
-      <Route path='/cart' element={ <CartConteiner /> } />
+    <CartContextProvider>
+      <NavBar />
 
-      <Route path='*' element={<Navigate to='/'/>}/>
+      <Routes >
+        <Route path='/' element={ <ItemListConteiner /> } />
+        <Route path='/Home' element={ <Principal /> } />
+        <Route path='/itemlistconteiner' element={ <ItemListConteiner /> } />
+        <Route path='/category/:id' element={ <ItemListConteiner /> } />
+        <Route path='/item/:id' element={ <ItemDetailConteiner /> } />
+        <Route path='/cart' element={ <CartConteiner /> } />
 
-    </Routes>
+        <Route path='*' element={<Navigate to='/'/>}/>
+
+      </Routes>
+
+    </CartContextProvider>
     </BrowserRouter>
+
+
   )
 }
 
