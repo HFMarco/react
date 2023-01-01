@@ -4,9 +4,12 @@ import { ItemList } from '../ItemList/ItemList'
 import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore'
 import './ItemListConteiner.css'
 import { Footerund } from '../Footer/Footerund'
+import { Loading } from '../Loading/Loading'
+
 
 
 export const ItemListConteiner = () => {
+    const [loading, setLoading] = useState(true)
     const[products,setProducts]= useState([])
     const{id}=useParams()
     useEffect(()=>{
@@ -17,16 +20,22 @@ export const ItemListConteiner = () => {
             getDocs(queryFiltrada)
             .then(data => setProducts(data.docs.map(product => ({id: product.id, ...product.data()}))))
             .catch(err => console.log(err))
+            .finally(()=>setLoading(false))
         } else {
             getDocs(queryCollection)
             .then(data => setProducts(data.docs.map(product =>({id: product.id, ...product.data()}))))
             .catch(err =>console.log())
+            .finally(()=>setLoading(false))
         }
     },[id])
 
     return(
         <>
-        <div className='shop_container'>
+        {loading ?
+        <Loading/>
+            :
+            <>
+            <div className='shop_container'>
             <div className='barraderecha'>
             <div className='buscador'>
                 <input id="inputbuscador"></input>
@@ -47,6 +56,8 @@ export const ItemListConteiner = () => {
         </div>
         </div>
         <Footerund />
+        </>
+            }    
         </>
     )
 }

@@ -2,36 +2,61 @@ import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { useState } from "react"
 import { useCartContext } from "../../Contexts/CartContextProvider"
 import { ItemsCartConteiner } from "../ItemsCartConteier/ItemsCartConteiner"
-
+import './ShowCartList.css'
 
 export const ShowCartList = () => {
     const [dataForm,setFormData] = useState({
         name: '',
         email: '',
-        phone: ''
+        phone: '',
+        date:''
     })
+
+    const[emaildos,setEmaildos] = useState({valor:'',validar: null})
     const {cartList , vaciarCarrito, cantidadTotal,sumatotal} = useCartContext()
 
-    const addOrder =(e) =>{
-        e.preventDefault()
-        const order = {}
-        order.comprador = dataForm
-        order.totalprice = sumatotal
-        order.items = cartList.map(({id,precio,nombre}) =>({id,precio,nombre}))
-        const db = getFirestore()
-        const queryCollection = collection(db, 'orders')
+    const capturedate =() =>{
+        dataForm.date = new Date()
+    }
 
-        addDoc(queryCollection, order)
-        .then(resp => (resp))
-        .catch(err => console.log(err))
-        .finally(() => vaciarCarrito())
+    const addOrder =(e) =>{
+            e.preventDefault()
+            const order = {}
+            order.comprador = dataForm
+            order.totalprice = sumatotal
+            order.items = cartList.map(({id,precio,nombre}) =>({id,precio,nombre}))
+            // const orderid =order
+            const db = getFirestore()
+            const queryCollection = collection(db, 'orders')
+            capturedate()
+
+
+            addDoc(queryCollection, order)
+            .then(resp => (alert(`El Id de su pedido es: ${resp.id}`)) )
+            .catch(err => console.log(err))
+            .finally(() => vaciarCarrito())
+
+
     }
     const handleonChange=(e) =>{
         setFormData({
             ...dataForm,
             [e.target.name] : e.target.value
         })
+
     }
+    const onChangecontraseña=(e)=>{
+        setEmaildos({...emaildos, valor:e.target.value})
+    }
+
+    const validarEmail = () => {
+			if(dataForm.email !== emaildos.valor){
+                setEmaildos({...emaildos, validar: false});
+			} else {
+
+				setEmaildos({...emaildos, validar: true});  
+			}
+	}
 
     return (
     <>
@@ -58,10 +83,11 @@ export const ShowCartList = () => {
             <p className="precio">{sumatotal}$</p>
             </div>
                 <form onSubmit={addOrder}>
-                    <input type ="text" onChange={handleonChange} value={dataForm.name} name ="name" placeholder="Ingrese su nombre" />
-                    <input type ="text" onChange={handleonChange} value={dataForm.phone} name ="phone" placeholder="Ingrese su phono" />
-                    <input type ="text" onChange={handleonChange} value={dataForm.email} name ="email" placeholder="Ingrese su email" />
-                    <button style={{cursor: "pointer"}} >Terminar la Compra</button>
+                    <input type ="text" onChange={handleonChange} value={dataForm.name} name ="name" placeholder="Ingrese su nombre" required/>
+                    <input type ="text" onChange={handleonChange} value={dataForm.phone} name ="phone" placeholder="Ingrese su phono" required/>
+                    <input type ="text" onChange={handleonChange} onKeyUp={validarEmail} value={dataForm.email} name ="email" placeholder="Ingrese su email" required/>
+                    <input type ="text" onChange={onChangecontraseña} onKeyUp={validarEmail}  value={emaildos.valor} placeholder="Ingrese su email"  required/>
+                    {emaildos.validar ?<button style={{cursor: "pointer"}} onSubmit={addOrder} id="btn">Terminar la Compra</button> :<button style={{cursor: "pointer"}} onSubmit={addOrder} id="btn" disabled>Terminar la Compra</button> }
                 </form>
             </div>
         </div>
