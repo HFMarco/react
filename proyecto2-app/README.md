@@ -17,7 +17,7 @@ El proyecto desarrollado utiliza lo siguiente:
 
 | Proyecto | Link-Netlify |
 | ------ | ------ |
-| E-commerce | [---] |
+| E-commerce | [https://playful-cucurucho-ae6426.netlify.app/] |
 
 
 
