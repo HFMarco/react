@@ -21,6 +21,7 @@ export const ItemListConteiner = () => {
             .then(data => setProducts(data.docs.map(product => ({id: product.id, ...product.data()}))))
             .catch(err => console.log(err))
             .finally(()=>setLoading(false))
+            
         } else {
             getDocs(queryCollection)
             .then(data => setProducts(data.docs.map(product =>({id: product.id, ...product.data()}))))

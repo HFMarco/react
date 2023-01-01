@@ -44,7 +44,8 @@ return (
     <div className="detallegame">
         <h1>{product.nombre}</h1>
         <h2>{product.category}</h2>
-        Detalle:
+        <br />
+        Detalle:    
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo in placeat vero optio quod, inventore ratione odio quam quasi voluptas vel quae at, temporibus illum? Provident cupiditate porro neque placeat?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo in placeat vero optio quod, inventore ratione odio quam quasi voluptas vel quae at, temporibus illum? Provident cupiditate porro neque placeat?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo in placeat vero optio quod, inventore ratione odio quam quasi voluptas vel quae at, temporibus illum? Provident cupiditate porro neque placeat?</p>

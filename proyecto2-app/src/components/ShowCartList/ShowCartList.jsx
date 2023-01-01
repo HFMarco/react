@@ -25,7 +25,6 @@ export const ShowCartList = () => {
             order.comprador = dataForm
             order.totalprice = sumatotal
             order.items = cartList.map(({id,precio,nombre}) =>({id,precio,nombre}))
-            // const orderid =order
             const db = getFirestore()
             const queryCollection = collection(db, 'orders')
             capturedate()
@@ -82,15 +81,19 @@ export const ShowCartList = () => {
             <p>Total:</p>
             <p className="precio">{sumatotal}$</p>
             </div>
+            <div className="divtabla"> 
                 <form onSubmit={addOrder}>
                     <input type ="text" onChange={handleonChange} value={dataForm.name} name ="name" placeholder="Ingrese su nombre" required/>
-                    <input type ="text" onChange={handleonChange} value={dataForm.phone} name ="phone" placeholder="Ingrese su phono" required/>
-                    <input type ="text" onChange={handleonChange} onKeyUp={validarEmail} value={dataForm.email} name ="email" placeholder="Ingrese su email" required/>
-                    <input type ="text" onChange={onChangecontraseña} onKeyUp={validarEmail}  value={emaildos.valor} placeholder="Ingrese su email"  required/>
+                    <input type ="number" onChange={handleonChange} value={dataForm.phone} name ="phone" placeholder="Ingrese su telefono" required/>
+                    <input type ="email" onChange={handleonChange} onKeyUp={validarEmail} value={dataForm.email} name ="email" placeholder="Ingrese su email" required/>
+                    <input type ="email" onChange={onChangecontraseña} onKeyUp={validarEmail}  value={emaildos.valor} placeholder="ReIngrese su email"  required/>
+
                     {emaildos.validar ?<button style={{cursor: "pointer"}} onSubmit={addOrder} id="btn">Terminar la Compra</button> :<button style={{cursor: "pointer"}} onSubmit={addOrder} id="btn" disabled>Terminar la Compra</button> }
+
                 </form>
             </div>
-        </div>
+            </div>
+            </div>
         </div>
     </>
     )

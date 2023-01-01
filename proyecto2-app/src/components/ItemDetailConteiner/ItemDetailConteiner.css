@@ -9,13 +9,14 @@
     flex-direction: row;
     width: 90%;
     justify-content:space-around;
-    margin-top: 35px;
+    margin-top: 70px;
 }
 .proddetaildiv{
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 33%;
+    margin-top: 40px;
 }
 .detallegame{
     display: flex;
@@ -25,6 +26,7 @@
     text-align: center;
     width: 25%;
     text-align: justify;
+    margin-top: 20px;
 }
 .divprecio{
     text-align: center;

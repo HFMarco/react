@@ -164,3 +164,32 @@
     justify-content: center;
     gap: 50px;
 }
+.divtabla{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 350px;
+    align-items: center;
+    justify-content: space-around;
+}
+.divtabla input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.divtabla input:valid{
+    background-color: #ddffdd;
+}
+.divtabla input:invalid{
+    background-color: #ffd5e0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
